@@ -5,9 +5,9 @@ import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
 const Menucard = ({ id }: { id: number }) => {
   return (
-    <div className="flex flex-col myborder-putih p-2 sm:p-1 bg-white cursor-pointer">
+    <div className="flex flex-col p-2 bg-white cursor-pointer myborder-putih sm:p-1">
       <div className="relative w-full">
-        <span className="absolute top-2 right-2 text-2xl">
+        <span className="absolute text-2xl top-2 right-2">
           <AiFillHeart className="fill-red-500" />
         </span>
         <Image
@@ -18,9 +18,11 @@ const Menucard = ({ id }: { id: number }) => {
           className="object-cover w-full rounded-lg"
         />
       </div>
-      <div className="flex justify-between mt-2 items-baseline sm:px-1 font-poppins">
-        <h3 className="text-black/70 sm:text-sm">Lorem Ipsum {id}</h3>
-        <p className="font-semibold text-2xl">15</p>
+      <div className="flex items-baseline justify-between mt-2 sm:px-1 font-poppins">
+        <h3 className="text-black/70 sm:text-sm line-clamp-1">
+          Lorem Ipsum {id}
+        </h3>
+        <p className="text-2xl font-semibold">15</p>
       </div>
     </div>
   );

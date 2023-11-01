@@ -24,23 +24,16 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        // 'sans': ['Poppins', '"Changa One"', 'sans-serif'],
         poppins: ["Poppins", "sans-serif"],
         changa: ['"Changa One"', "sans-serif"],
-        inter: ["Inter", "sans-serif"],
       },
       colors: {
-        orange_baru: "hsl(var(--orange-baru))",
-        kuning_baru: "hsl(var(--kuning-baru))",
-        pastel_baru: "hsl(var(--pastel-baru))",
-        merah_baru: "hsl(var(--merah-baru))",
-        itam_baru: "hsl(var(--itam-baru))",
-
         orange: "#FF4F4F",
         kuning: "#FFDE65",
         pastel: "#FFFAED",
         merah: "#EB191D",
         itam: "#2C2C2C",
+        ijo: "#78EB6F",
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

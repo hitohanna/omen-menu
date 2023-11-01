@@ -1,6 +1,7 @@
 import Menucard from "@/components/Menucard";
 import Menumodal from "@/components/Menumodal";
 import Modal from "@/components/modal/Modal";
+import { Separator } from "@/components/ui/separator";
 import { Menuid } from "@/constants";
 import Link from "next/link";
 import { AiOutlineArrowLeft } from "react-icons/ai";
@@ -11,33 +12,46 @@ type Props = {
 
 const page = ({ searchParams }: Props) => {
   const showModal = searchParams?.modal;
-  console.log(showModal);
   return (
     <>
-      <div className="flex flex-col w-full max-w-[85rem] sm:max-w-[21rem] lg:max-w-[44rem] 2xl:max-w-[75rem] mx-auto">
+      <div className="relative mb-8 width-global font-poppins">
         <div className="flex items-center justify-between w-full mt-8 sm:mt-4">
-          <h3 className="font-changa text-6xl text-merah">MENU</h3>
+          <h3 className="text-6xl font-changa text-merah">MENU</h3>
 
-          <div className="flex items-center gap-4">
-            <Link
-              href="/"
-              className="flex gap-2 items-center myborder-putih px-2 py-1 "
-            >
-              <div className="text-xl">
-                <AiOutlineArrowLeft />
-              </div>
-              <h3 className="font-bold">Home</h3>
-            </Link>
+          <Link
+            href="/"
+            className="fixed z-50 flex items-center p-3 rounded-full bottom-4 right-4 bg-merah"
+          >
+            <div className="text-3xl text-white">
+              <AiOutlineArrowLeft />
+            </div>
+          </Link>
 
+          <div className="items-center hidden gap-2">
             <Link
               href="/admin"
-              className="flex gap-2 items-center myborder px-2 py-1 bg-kuning hover:bg-kuning/70"
+              className="items-center gap-2 px-2 py-1 myborder bg-kuning hover:bg-kuning/70"
             >
               <h3 className="font-bold">Admin</h3>
             </Link>
           </div>
         </div>
-        <div className="grid grid-cols-5 gap-4 mt-8 sm:grid-cols-2">
+
+        {/* ----------------menu-------------------------- */}
+        <h3 className="mt-8 text-3xl font-changa text-itam">MAKANAN</h3>
+        <Separator className="my-2" />
+        <div className="grid grid-cols-5 gap-4 mt-3 sm:grid-cols-2 sm:gap-2">
+          {Menuid.map((menu, i) => (
+            <Link href={`/menu/?modal=true&?id=${menu.id}`}>
+              <Menucard id={menu.id} />
+            </Link>
+          ))}
+        </div>
+
+        {/* ----------------menu-------------------------- */}
+        <h3 className="mt-8 text-3xl font-changa text-itam">MINUMAN</h3>
+        <Separator className="my-2" />
+        <div className="grid grid-cols-5 gap-4 mt-3 sm:grid-cols-2 sm:gap-2">
           {Menuid.map((menu, i) => (
             <Link href={`/menu/?modal=true&?id=${menu.id}`}>
               <Menucard id={menu.id} />
@@ -45,6 +59,7 @@ const page = ({ searchParams }: Props) => {
           ))}
         </div>
       </div>
+
       {showModal && (
         <Modal>
           <>

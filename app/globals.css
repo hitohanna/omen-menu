@@ -6,25 +6,21 @@
 @tailwind utilities;
 
 .myborder{
-  @apply border-black border-2 rounded-xl bg-kuning hover:bg-kuning/40
+  @apply border-black border-2 rounded-xl bg-kuning hover:bg-yellow-400 transition-colors
 }
 .myborder-putih{
-  @apply border-black border-2 rounded-xl bg-white
+  @apply border-black border-2 rounded-md bg-white text-sm hover:border-merah transition-colors
 }
 .myborder-merah{
   @apply border-merah border-2 rounded-xl bg-white text-merah hover:text-merah hover:bg-kuning
+}
+.width-global{
+  @apply flex flex-col w-full max-w-[85rem] sm:max-w-[20rem] lg:max-w-[44rem] 2xl:max-w-[75rem] mx-auto
 }
 
  
 @layer base {
   :root {
-
-    --orange-baru: 0 100% 65%,
-    --kuning-baru: 47 100% 70%,
-    --pastel-baru: 43 100% 96%,
-    --merah-baru: 359 84% 51%,
-    --itam-baru: 0 0% 17%,
-
     --background: bg-merah;
     --foreground: 0 0% 3.9%;
 

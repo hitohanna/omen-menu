@@ -10,6 +10,12 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
+const kategori = [
+  { nama: "Makanan" },
+  { nama: "Minuman" },
+  { nama: "Tambahan" },
+];
+
 const invoices = [
   {
     invoice: "INV001",
@@ -59,12 +65,12 @@ const page = () => {
   return (
     <div className="flex flex-col w-full max-w-[85rem] sm:max-w-[21rem] lg:max-w-[44rem] 2xl:max-w-[75rem] mx-auto">
       <div className="flex items-center justify-between w-full mt-8 sm:mt-4">
-        <h3 className="font-changa text-6xl text-merah">MENU</h3>
+        <h3 className="text-6xl font-changa text-merah">MENU</h3>
 
         <div className="flex items-center gap-4">
           <Link
             href="/menu"
-            className="flex gap-2 items-center myborder-putih px-2 py-1 "
+            className="flex items-center gap-2 px-2 py-1 myborder-putih "
           >
             <div className="text-xl">
               <AiOutlineArrowLeft />
@@ -74,18 +80,43 @@ const page = () => {
 
           <Link
             href="/admin/tambah"
-            className="flex gap-2 items-center myborder px-2 py-1 bg-kuning hover:bg-kuning/70"
+            className="flex items-center gap-2 px-2 py-1 myborder bg-kuning hover:bg-kuning/70"
           >
             <h3 className="font-bold">Tambah</h3>
           </Link>
         </div>
       </div>
 
-      <div className="flex flex-col mt-8 w-full">
-        <h3 className="font-bold text-xl">LIST BARANG</h3>
-        <div>
-          <Table className="font-poppins mt-4">
-            <TableCaption>A list of your recent invoices.</TableCaption>
+      <div className="flex flex-col w-full mt-8">
+        <h3 className="text-xl font-bold font-poppins">KATEGORI</h3>
+        <div className="bg-white border rounded-md">
+          <Table className="font-poppins">
+            <TableHeader className="font-bold text-black">
+              <TableRow className="font-bold ">
+                <TableHead className="w-[50px]">No</TableHead>
+                <TableHead className="">Kategori</TableHead>
+                <TableHead className="text-center ">Action</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {kategori.map((kat, i) => (
+                <TableRow key={i}>
+                  <TableCell className="font-medium">{i + 1}</TableCell>
+                  <TableCell className="font-medium">{kat.nama}</TableCell>
+                  <TableCell className="font-medium text-center">
+                    {kat.nama}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
+      </div>
+
+      <div className="flex flex-col w-full mt-8">
+        <h3 className="text-xl font-bold font-poppins">LIST BARANG</h3>
+        <div className="">
+          <Table className="mt-4 font-poppins">
             <TableHeader className="font-bold text-black">
               <TableRow className="font-bold">
                 <TableHead className="w-[100px]">Invoice</TableHead>

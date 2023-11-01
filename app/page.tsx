@@ -9,17 +9,18 @@ import {
 import { IoLogoTiktok } from "react-icons/io5";
 import { GrFormNextLink } from "react-icons/gr";
 import { FiArrowUpRight } from "react-icons/fi";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <main className="w-full max-w-[85rem] sm:max-w-[21rem] lg:max-w-[44rem] 2xl:max-w-[75rem] mx-auto">
+    <main className="width-global">
       <section className="flex flex-col w-full h-full">
-        <div className="flex mt-24 sm:mt-32 mx-auto">
+        <div className="flex mx-auto mt-24 sm:mt-32">
           {/* <span className="text-[19rem] leading-[15rem] text-start items-center font-changa text-merah">
             ROMBONG OMEN
           </span> */}
           <svg
-            className="w-[85rem] sm:w-[21rem] lg:w-[44rem] 2xl:w-[75rem]"
+            className="w-[85rem] sm:w-[20rem] lg:w-[44rem] 2xl:w-[75rem]"
             viewBox="0 0 2167 683"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -33,23 +34,23 @@ export default function Home() {
 
         <Link
           href="/menu"
-          className="flex items-center flex-shrink gap-4 px-5 py-2.5 w-fit mt-16 transition-colors myborder  "
+          className="flex items-center gap-4 px-5 py-2.5 w-fit mt-16 bg-kuning border-2 rounded-md border-black hover:border-merah transition-colors"
         >
-          <h3 className=" text-itam font-extrabold text-3xl sm:text-lg font-poppins tracking-wider">
+          <h3 className="text-3xl font-extrabold tracking-wider text-itam sm:text-lg">
             MENU
           </h3>
-          <span className="flex items-center text-4xl text-merah rounded-md">
+          <span className="flex items-center text-4xl rounded-md text-merah">
             <FiArrowUpRight />
           </span>
         </Link>
 
         <div className="flex flex-wrap justify-between mb-8 mt-28 sm:gap-8 lg:gap-16 font-poppins">
           <div className="flex flex-col ">
-            <h4 className="text-merah text-4xl leading-10">
+            <h4 className="text-4xl leading-10 text-merah">
               All-Day Breakfast <br /> Coffee & Good vibes
             </h4>
             <div className="flex flex-col">
-              <span className="border border-merah bg-black w-full mt-4" />
+              <span className="w-full mt-4 bg-black border border-merah" />
               <p className="mt-4 italic font-semibold text-merah">
                 TAKEAWAY ONLY
               </p>
@@ -58,7 +59,7 @@ export default function Home() {
 
           <div className="flex flex-row gap-12">
             <div className="sm:text-sm">
-              <h4 className="font-bold  text-merah">Alamat</h4>
+              <h4 className="font-bold text-merah">Alamat</h4>
               <p className="text-merah">
                 Griya Kusuma Bangsa C6
                 <br />
@@ -66,29 +67,29 @@ export default function Home() {
               </p>
             </div>
             <div className="sm:text-sm">
-              <h4 className="font-bold  text-merah">Jam buka</h4>
+              <h4 className="font-bold text-merah">Jam buka</h4>
               <p className="text-merah">senin - minggu</p>
               <p className="text-merah">0700 - 2100</p>
             </div>
           </div>
 
           <div className="flex">
-            <div className="flex h-fit gap-4">
+            <div className="flex gap-4 h-fit">
               <Link
                 href="/"
-                className="p-3 text-3xl sm:text-xl sm:p-2 transition-colors myborder-merah hover:bg-kuning"
+                className="p-3 text-3xl transition-colors sm:text-xl sm:p-2 myborder-merah hover:bg-kuning"
               >
                 <AiOutlineWhatsApp />
               </Link>
               <Link
                 href="/"
-                className="p-3 text-3xl sm:text-xl sm:p-2 transition-colors myborder-merah hover:bg-kuning"
+                className="p-3 text-3xl transition-colors sm:text-xl sm:p-2 myborder-merah hover:bg-kuning"
               >
                 <AiOutlineInstagram />
               </Link>
               <Link
                 href="/"
-                className="p-3 text-3xl sm:text-xl sm:p-2 transition-colors myborder-merah hover:bg-kuning"
+                className="p-3 text-3xl transition-colors sm:text-xl sm:p-2 myborder-merah hover:bg-kuning"
               >
                 <IoLogoTiktok />
               </Link>
