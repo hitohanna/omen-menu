@@ -1,32 +1,30 @@
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import Image from "next/image";
 
-const Menumodal = () => {
+const Menumodal = ({ Menu }: { Menu: Menu }) => {
   return (
-    <div className="flex flex-col myborder-putih p-4 sm:p-3 bg-white cursor-pointer mx-auto font-poppins">
-      <div className="relative w-full">
-        <span className="absolute top-2 right-2 text-2xl">
+    <div className="flex flex-col p-4 mx-auto bg-white cursor-pointer myborder-putih sm:p-3 font-poppins">
+      <div className="relative min-w-full">
+        <span className="absolute text-2xl top-2 right-2">
           <AiFillHeart className="fill-red-500" />
         </span>
         <Image
-          src="/menu.png"
+          src={Menu.gambar}
           alt="menu"
-          width={200}
-          height={200}
-          className="object-cover w-full rounded-lg"
+          width={177}
+          height={177}
+          placeholder="blur"
+          priority={true}
+          blurDataURL={"/blur.png"}
+          className="flex object-cover w-full rounded-lg"
         />
       </div>
-      <div className="flex justify-between mt-2 items-baseline sm:px-1">
-        <h3 className="text-black/70 text-lg font-bold">Lorem Ipsum</h3>
-        <p className="font-semibold text-2xl">15</p>
+      <div className="flex items-baseline justify-between mt-2 sm:px-1">
+        <h3 className="text-lg text-black">{Menu.nama}</h3>
+        <p className="text-2xl font-semibold">{Menu.harga}</p>
       </div>
       <span className="h-[1px] border-t border-black mt-4" />
-      <p className="my-4 sm:text-sm">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-        consectetur minus laudantium obcaecati doloremque similique excepturi
-        deleniti quis sunt soluta aspernatur praesentium, sequi nemo sed,
-        placeat architecto? Doloremque, voluptates cupiditate?
-      </p>
+      <p className="my-4 sm:text-sm text-black/70">{Menu.deskripsi}</p>
     </div>
   );
 };

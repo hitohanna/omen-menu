@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const fontFamily = require("tailwindcss/defaultTheme");
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -14,6 +15,7 @@ module.exports = {
       lg: { max: "1023px" },
       md: { max: "767px" },
       sm: { max: "639px" },
+      xs: { max: "412px" },
     },
     container: {
       center: true,
@@ -24,8 +26,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
-        changa: ['"Changa One"', "sans-serif"],
+        poppins: ["var(--font-poppins)"],
+        changa: ["var(--font-changa)"],
+        // changa: ['"Changa One"', "sans-serif"],
       },
       colors: {
         orange: "#FF4F4F",

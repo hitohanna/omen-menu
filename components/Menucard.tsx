@@ -1,29 +1,32 @@
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
+import Menumodal from "./Menumodal";
+import ListMenu from "./element/listMenu";
 
-const Menucard = ({ id }: { id: number }) => {
+type KatProps = {
+  title: string;
+  gambar: string;
+};
+
+const Menucard = ({ Menus, Kat }: { Menus: Menu[]; Kat: KatProps }) => {
   return (
-    <div className="flex flex-col p-2 bg-white cursor-pointer myborder-putih sm:p-1">
-      <div className="relative w-full">
-        <span className="absolute text-2xl top-2 right-2">
-          <AiFillHeart className="fill-red-500" />
-        </span>
-        <Image
-          src="/menu.png"
-          alt="menu"
-          width={200}
-          height={200}
-          className="object-cover w-full rounded-lg"
-        />
-      </div>
-      <div className="flex items-baseline justify-between mt-2 sm:px-1 font-poppins">
-        <h3 className="text-black/70 sm:text-sm line-clamp-1">
-          Lorem Ipsum {id}
-        </h3>
-        <p className="text-2xl font-semibold">15</p>
-      </div>
+    <div className="flex flex-col p-4 myborder-putih">
+      <h3 className="text-3xl uppercase font-changa text-merah">{Kat.title}</h3>
+      <Image
+        src={Kat.gambar}
+        width={720}
+        height={720}
+        alt="Gambar Kategori"
+        className="object-cover w-full mt-8 aspect-video rounded-xl"
+      />
+      {Menus.filter((menu) => menu.kategori.title.includes(Kat.title)).map(
+        (menu, i) => (
+          <div key={i}>
+            <ListMenu Menu={menu} />
+          </div>
+        )
+      )}
     </div>
   );
 };

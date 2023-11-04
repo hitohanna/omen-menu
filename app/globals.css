@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
 
 @tailwind base;
 @tailwind components;
@@ -13,9 +13,6 @@
 }
 .myborder-merah{
   @apply border-merah border-2 rounded-xl bg-white text-merah hover:text-merah hover:bg-kuning
-}
-.width-global{
-  @apply flex flex-col w-full max-w-[85rem] sm:max-w-[20rem] lg:max-w-[44rem] 2xl:max-w-[75rem] mx-auto
 }
 
  
