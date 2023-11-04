@@ -5,7 +5,7 @@ const Menu = ({ Menus }: { Menus: Menu[] }) => {
 
   return (
     <div className="flex flex-col w-full mt-8">
-      <div className="grid w-full grid-cols-3 gap-8 mt-3 sm:grid-cols-1 sm:gap-4 ">
+      <div className="gap-4 mt-3 space-y-4 sm:columns-1 lg:columns-2 sm:gap-4 columns-4">
         {FilteredKat.map((kat, i) => (
           <Menucard Menus={Menus} Kat={kat} key={i} />
         ))}

@@ -77,6 +77,14 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      animation: {
+        endless: "endless 20s linear infinite",
+
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        disco: "disco 1.5s linear infinite",
+        "spin-forward": "spin 2s linear infinite",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },

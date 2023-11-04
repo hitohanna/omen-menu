@@ -34,7 +34,7 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${changa.variable} font-sans`}
     >
-      <body className="w-full min-h-screen px-16 sm:px-4 md:px-8 bg-pastel">
+      <body className="w-full min-h-screen px-16 bg-pastel sm:px-4 md:px-8">
         {children}
       </body>
     </html>

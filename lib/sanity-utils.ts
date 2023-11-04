@@ -9,7 +9,7 @@ export async function getMenus() {
       kategori->{
         title,
       },
-      "kat":*[_type == "kategori"]{
+      "kat":*[_type == "kategori"] | order(seri asc){
       title,
         "gambar":gambar.asset->url
     }

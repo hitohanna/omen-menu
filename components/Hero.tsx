@@ -17,7 +17,7 @@ const Hero = () => {
 
       <Link
         href="/menu"
-        className="flex items-center gap-4 px-5 py-2.5 w-fit mt-16 bg-kuning border-2 rounded-md border-black hover:border-merah transition-colors"
+        className="flex items-center gap-4 px-5 py-2.5 w-fit mt-16 bg-kuning border-2 rounded-2xl border-black hover:border-merah transition-colors"
       >
         <h3 className="text-3xl font-extrabold text-itam sm:text-2xl">MENU</h3>
         <span className="flex items-center text-5xl text-black rounded-md sm:text-3xl">

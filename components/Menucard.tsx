@@ -11,7 +11,7 @@ type KatProps = {
 
 const Menucard = ({ Menus, Kat }: { Menus: Menu[]; Kat: KatProps }) => {
   return (
-    <div className="flex flex-col p-4 myborder-putih">
+    <div className="flex flex-col p-4 overflow-hidden myborder-putih">
       <h3 className="text-3xl uppercase font-changa text-merah">{Kat.title}</h3>
       <Image
         src={Kat.gambar}
