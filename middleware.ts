@@ -8,12 +8,14 @@ export default withAuth(
         // console.log(request.nextUrl.pathname)
         // console.log(request.nextauth.token)
 
-        if (request.nextUrl.pathname.startsWith("/admin")
-            && request.nextauth.token?.role !== "admin") {
-            return NextResponse.rewrite(
-                new URL("/denied", request.url)
-            )
-        }
+        // if (request.nextUrl.pathname.startsWith("/admin")
+        //     && request.nextauth.token?.role !== "admin") {
+        //     return NextResponse.rewrite(
+        //         new URL("/denied", request.url)
+        //     )
+        // }
+
+
         // if (request.nextUrl.pathname.startsWith("/studio")
         //     && request.nextauth.token?.role !== "admin") {
         //     return NextResponse.rewrite(
@@ -30,4 +32,5 @@ export default withAuth(
 
 // Applies next-auth only to matching routes - can be regex
 // Ref: https://nextjs.org/docs/app/building-your-application/routing/middleware#matcher
-export const config = { matcher: ["/admin/:path*"] }
+export const config = { matcher: [] }
+// export const config = { matcher: ["/admin/:path*"] }

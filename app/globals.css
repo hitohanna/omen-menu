@@ -12,6 +12,7 @@
   @apply border-merah border-2 rounded-xl bg-white text-merah hover:text-merah hover:bg-kuning
 }
 
+
  
 @layer base {
   /* :root {
