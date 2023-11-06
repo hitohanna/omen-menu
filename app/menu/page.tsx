@@ -11,8 +11,6 @@ const page = async () => {
   const Kategories: Kategories[] = await getKategori();
   const Menus: Menus[] = await getMenus();
 
-  console.log(Menus.length);
-
   return (
     <div className="relative flex flex-col w-full mb-8 font-poppins">
       <Link
